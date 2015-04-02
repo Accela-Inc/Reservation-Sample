@@ -1,0 +1,1295 @@
+/** Declare Main Variables **/
+$fontStack: Open Sans, Helvetica, sans-serif;
+$primaryColor: #333333;
+$brandImageBkgd: transparent;
+$brandHeight: 55px;
+
+$menuColor: #333333;
+$menuBgColor: rgba(255, 255, 255, .9);
+$menuFocusColor: #FFFFFF;
+$menuFocusBgColor: #428bca;
+$menuBoxShadow: 0 4px 12px rgba(0, 0, 0, .8);
+
+$arrowColor: #FFFFFF;
+$arrowBorderColor: #CCCCCC;
+$semiTransparent: rgba(0, 0, 0, .35);
+$borderRadius: 5px;
+$borderRadiusSmall: 3px;
+
+$widthShort: 25px;
+$widthMedum: 75px;
+$widthWide: 150px;
+
+$markerPopupWidth: 225px;
+$markerPopupHeight: 150px;
+
+/** Create a color pallette **/
+$base: #633;
+$compliment1: adjust-hue($base, 180);
+$compliment1: darken(adjust-hue($base, 180), 5%);
+$lighten1: lighten($base, 15%);
+$lighten2: lighten($base, 30%);
+
+@font-face {
+    font-family: 'Glyphicons Halflings';
+    src: url('resources/external/bootstrap/fonts/glyphicons-halflings-regular.eot');
+    src: url('resources/external/bootstrap/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../external/bootstrap/fonts/glyphicons-halflings-regular.woff') format('woff'), url('../external/bootstrap/fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../external/bootstrap/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+body {
+  font: 100% $fontStack;
+  color: $primaryColor;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 100;
+    overflow: overflow;
+    overflow-y: overflow;
+    -webkit-overflow-scrolling: touch;
+    outline: 0;
+}
+.overlay.pageOverlay {
+    position: fixed !important;
+    z-index: 10001;
+}
+.loadingContainer {
+    height: 50px;
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+.overlay .name {
+    position: absolute;
+    top: 100%;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    color: #fff;
+    padding: 0 0 0 25px;
+}
+body .ai-indicator {
+    z-index: 101;
+    text-align: center;
+    margin: 50px auto;
+    top: 0;
+    position: absolute;
+}
+body .ai-circled {
+    left: 45%;
+}
+body .ai-dotted {
+    left: 40%;
+    width: 50px;
+}
+
+body .ai-spinner {
+    left: 46%;
+    top: 0;
+}
+body .bgImageOverlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, .6);
+}
+.globalRoundedCorners,
+.globalRoundedCornersTop,
+.globalRoundedCornersRight,
+.globalRoundedCornersBottom,
+.globalRoundedCornersLeft {
+    border-radius: $borderRadius;
+}
+
+.globalRoundedCornersTop {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.globalRoundedCornersRight {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.globalRoundedCornersBottom {
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+
+.globalRoundedCornersLeft {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.quickFacts {
+    margin: 20px;
+}
+
+.quickFactTitle {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.header-title {
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    height: 56px;
+    margin: 0 auto;
+    padding: 15px;
+    background-color: $semiTransparent;
+    border-bottom: 1px solid;
+    color: #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    h2 {
+        font-size: 26px;
+        margin: -10px 0 0 0;
+    }
+    h3 {
+        text-transform: uppercase;
+        font-size: 12px;
+        margin: 4px 0 0 0;
+    }
+}
+
+.header-hr {
+    font-weight: 400;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    span {
+        padding: 0 20px;
+        background: #fff;
+        position: relative;
+        font-weight: 400;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+    }
+}
+
+h2.header-hr:before {
+    border-bottom: solid 1px #e6e5e4;
+    width: 100%;
+    display: block;
+    content: "";
+    position: absolute;
+    top: 45%;
+    z-index: 0;
+}
+
+.horizontal-list {
+    margin: 0 auto;
+    display: table;
+    width: 100%;
+    ul {
+        display: table-row;
+        li {
+            display: table-cell;
+            text-align: center;
+            vertical-align: middle;
+        }
+    }
+    li {
+        border-left: solid 1px #e6e5e4;
+        padding: 10px;
+    }
+    li:first-of-type {
+        border-left: none;
+    }
+}
+
+#MyItinerary,
+#LoginDrop {
+    width: 615px;
+    padding: 0 31px;
+    position: absolute;
+    right: 0;
+    top: 62px;
+    border-color: 1px solid #efefef;
+    background-color: $menuBgColor;
+    box-shadow: $menuBoxShadow;
+    border-radius: $borderRadius;
+    cursor: default;
+    z-index: 1000;
+}
+
+#LoginDrop.arrow_top:after {
+    right: 10%;
+    left: auto;
+}
+#MyItinerary {
+    right: 0;
+    width: 350px;
+    padding: 0px;
+}
+#MyItinerary.arrow_top:after {
+    right: 50%;
+    left: auto; 
+}
+
+.recApp .modal-dialog {
+    width: 85%;
+    height: 90%;
+    margin: 50px auto 10px auto;
+}
+
+@media (min-width: 500px) {
+    .container,
+    .angular-leaflet-map,
+    #Content,
+    #SiteDetail,
+    #FilterPanel,
+    #CampSitesMap,
+    #PhotoGallery {
+        width: 350px;
+    }
+    #AvailabilityCalendar {
+
+    }
+}
+
+
+@media (max-width: 600px) {
+    #AvailabilityCalendar .calendars {
+      overflow: auto;
+      max-height: 150px;
+      max-width: 99%;
+    }
+    .quickFactTitle {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .recApp .navbar-default .navbar-collapse {
+        margin-top: $brandHeight;
+    }
+    #MyItinerary,
+    #LoginDrop {
+        position: relative;
+        margin-bottom: 10px;
+        top: 10px;
+
+    }
+    #MyItinerary.arrow_top:after,
+    #LoginDrop.arrow_top:after {
+        left: 10%;
+        right: auto;
+    }
+    #LoginDrop {
+        width: 350px;
+    }
+    #LoginDrop .signIn,
+    #LoginDrop .createAccount {
+        border-width: 0px;
+        padding: 0px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container,
+    .angular-leaflet-map,
+    #Content,
+    #SiteDetail,
+    #FilterPanel,
+    #CampSitesMap,
+    #PhotoGallery {
+      width: 740px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container,
+    .angular-leaflet-map,
+    #Content,
+    #SiteDetail,
+    #FilterPanel,
+    #CampSitesMap,
+    #PhotoGallery {
+       width: 940px;
+    }
+}
+
+#FilterPanel {
+    padding: 5px;
+    color: #fff;
+    background-color: $semiTransparent;
+    z-index: 800;
+    margin: 0px;
+    height: 35px;
+}
+#FilterPanel .btn-group {
+    margin: 0 2px;
+}
+#FilterPanel .reserveAction {
+    position: absolute;
+    right: 25px;
+}
+#FilterPanel .dropdown-menu>li>a {
+    cursor: default;
+}
+#FilterPanel .inputShort {
+    width: $widthShort;
+}
+#FilterPanel .labelTop {
+    display:block;
+    clear: both;
+}
+#SiteFilter, 
+#DateFilter,
+#TypeFilter,
+#AttributeFilter {
+    position: absolute;
+    top: 35px;
+    background-color: $menuBgColor;
+    box-shadow: $menuBoxShadow;
+    color: $menuColor;
+    z-index: 10;
+    left: 0;
+    width: 200px;
+    padding: 10px;
+}
+#AttributeFilter {
+    width: 400px;
+}
+#SiteFilter {
+    padding: 0px;
+}
+.filterContainer {
+    padding: 0px;
+    overflow: auto;
+    max-height: 525px;
+
+}
+.menuBtnGroup {
+    clear: both;
+    margin-top:10px;
+    border-top: 1px solid #cccccc;
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+}
+#SiteFilter.arrow_top:after,
+#DateFilter.arrow_top:after,
+#TypeFilter.arrow_top:after,
+#AttributeFilter.arrow_top:after {
+    left: 10%;
+}
+
+#FilterPanel .link {
+    color: $menuColor;
+    padding: 5px 15px;
+    display: block;
+}
+#FilterPanel .link:focus,
+#FilterPanel .link:hover {
+    background-color: $menuFocusBgColor;
+    color: $menuFocusColor;
+    text-decoration: underline;
+}
+#FilterPanel .filterBtn {
+    color: $primaryColor;
+    background-color: $menuBgColor;
+    border-radius: $borderRadiusSmall;
+    padding: 1px 7px;
+}
+
+/** Tooltip arrows **/
+.arrow_box {
+    position: relative;
+    background: $arrowColor;
+}
+.arrow_box:after {
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-width: 10px;
+}
+.arrow_top:after {
+    border-bottom-color: $arrowColor;
+    margin-left: -10px;
+    bottom: 100%;
+    left: 50%;
+}
+.arrow_right:after {
+    border-left-color: $arrowColor;
+    margin-top: -10px;
+    top: 50%;
+    left: 100%;
+}
+.arrow_bottom:after {
+    border-top-color: $arrowColor;
+    margin-left: -10px;
+    top: 100%;
+    left: 50%;
+}
+.arrow_left .leaflet-popup-tip-container {
+    border-right-color: $arrowColor;
+    margin-top: -10px;
+    top: 50%;
+    right: 100%;
+}
+
+.nav,
+.pagination,
+.carousel,
+.panel-title a {
+    cursor: pointer;
+}
+
+.globalClear {
+    clear: both;
+}
+
+.globalFloatLeft {
+    float: left;
+}
+
+.globalFloatRight {
+    float: right;
+}
+
+.rtl .globalFloatLeft {
+    float: right;
+}
+
+.rtl .globalFloatRight {
+    float: left;
+}
+
+.globalAction {
+    padding: 2px 5px;
+}
+.pageWrapper {
+    font-family: 'Open Sans', sans-serif;
+}
+
+.globalClear {
+    clear: both;
+}
+
+.sr-only:focus {
+    z-index: 10001;
+    overflow: inherit;
+    clip: inherit;
+    width: auto;
+    padding: 5px;
+    text-decoration: underline;
+    background-color: #fff;
+}
+
+.navbar-header .customBrand {
+    padding: 3px 15px 3px 5px;
+}
+
+.brandImage {
+    background-color: $brandImageBkgd;
+    border-radius: $borderRadiusSmall;
+}
+
+#AppNav {
+    z-index: 900;
+    margin: 0 auto;
+}
+
+.datePickerFilter {
+    margin: 10px 0; 
+}
+
+.signIn{
+    width: 284px;
+    margin-left: -1px;
+    padding: 9px 0 20px 25px;
+    border-left: 1px solid #c6c6c6;
+}
+
+.createAccount{
+    width: 270px;
+    padding: 8px 27px 20px 0;
+
+    border-right: 1px solid #c6c6c6;
+}
+
+.bulletedList li{
+    list-style-type: disc;
+}
+
+.noBulletedList li{
+    list-style-type: none;
+}
+
+.signInLink{
+    margin-top: 8px;
+    padding: 5px;
+}
+
+.recApp .navbar-default {
+    background-color: #ffffff;
+    border-bottom: 1px solid #cccccc;
+    box-shadow: 0 1px 4px rgba(0,0,0,.25);
+}
+
+.recApp .navbar {
+    border-radius: 0px;
+}
+
+.navbar .link:active,
+.navbar .link:hover,
+.navbar .link:focus{
+    color: #555;
+    background-color: #e7e7e7;
+    
+}
+
+.panelContent {
+    background-color: rgba(255, 255, 255, 1);
+    border-top: 1px solid #cccccc;
+    box-shadow: 0px -4px 4px 0px rgba(0,0,0,.25);
+    padding: 10px 50px ;
+}
+
+.angular-leaflet-map,
+#CampSitesMap {
+    height: 525px;
+    margin: 0px;
+    padding: 0px;
+    z-index: 1;
+}
+
+#CampSitesMap .leaflet-control-container {
+    z-index: 1;
+    position: relative;
+}
+#CampSitesMap .leaflet-container {
+    background-color: transparent;
+}
+.custom-offset-top {
+    position: absolute;
+    transform: rotate(180deg);
+    top: -20px;
+}
+
+.markerCoordinates {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#main p {
+  color: #00ff00;
+  width: 97%;
+
+  .redbox {
+    background-color: #ff0000;
+    color: #000000;
+  }
+}
+
+/* Marker Popup */
+div.markerPopup {
+    width: $markerPopupWidth;
+    height: $markerPopupHeight;
+    padding: 0px;
+}
+
+.top_center .leaflet-popup-tip-container,
+.top_left .leaflet-popup-tip-container,
+.top_right .leaflet-popup-tip-container,
+.bottom_left .leaflet-popup-tip-container,
+.bottom_right .leaflet-popup-tip-container {
+    position: absolute;
+    left: 94px;
+}
+.markerPopup.top_center .leaflet-popup-tip-container,
+.markerPopup.top_left .leaflet-popup-tip-container,
+.markerPopup.top_right .leaflet-popup-tip-container {
+    transform: rotate(180deg);
+    top: -20px;
+}
+.markerPopup.top_left .leaflet-popup-tip-container,
+.markerPopup.bottom_left .leaflet-popup-tip-container {
+    left: 6px;
+}
+.markerPopup.top_right .leaflet-popup-tip-container,
+.markerPopup.bottom_right .leaflet-popup-tip-container {
+    left: 182px;
+}
+
+.markerPopup .leaflet-popup-content-wrapper {
+    height: $markerPopupHeight;
+    border-radius: $borderRadius;
+}
+
+.markerPopup .leaflet-popup-content {
+    margin: 0px;
+}
+
+.leaflet-container .markerPopup a.leaflet-popup-close-button {
+    color: #000000;
+    z-index: 1;
+}
+
+.markerPopupTitle {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+}
+
+.markerPopupDetails {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 120px
+}
+
+.markerPopup .btn {
+    color: #ffffff;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.markerPopUpImage {
+    border-radius: $borderRadiusSmall;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    width: 100px;
+    height: 100px;
+}
+
+.markerPopupFeatureList {
+    position: absolute;
+    top: 40px;
+    left: 10px;
+    width: 100px;
+    margin: 0px;
+}
+
+.markerPopupFeatureItem {
+    padding: 0 2px;
+    width: 23px;
+    height: 20px;
+    display: inline-block;
+}
+
+.markerPopupFeatureItem .fa {
+    font-size: 19px;
+    margin: 2px;
+}
+.leaflet-control-container .legend {
+    padding: 6px 8px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    background: rgba(255,255,255, 0.9);
+    line-height: 18px;
+    border-radius: $borderRadius;
+    width: 200px;
+    color: #555;
+}
+
+.leaflet-control-container .legend {
+    position: absolute;
+    top: 470px;
+}
+
+.legend i {
+    color: #777;
+    width: 18px;
+    height: 18px;
+    float: left;
+    margin-right: 8px;
+    opacity: 0.7;
+}
+
+#SiteAttributes,
+#SiteList {
+    overflow-y: auto;
+    height: 230px;
+    max-height: 230px;
+    padding: 5px 5px 15px 5px;
+    margin: 6px 10px;
+    border: 1px solid;
+}
+
+#SiteFilterToggle {
+    color: #fff;
+    font-size: 15px;
+    vertical-align: middle;
+    border: 0px;
+    padding: 0px;
+    line-height: 1px;
+    background-color: transparent;
+}
+
+#SiteFilterToggle .iconToggle{
+    font-size: 20px;
+    margin-left: 5px;
+}
+
+#SiteListToggle.siteListClosed {
+    left: 0px;
+}
+
+#LocationPhotoGallery {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#LocationPhotoGallery .thumb {
+    margin: 2px;
+    display: inline-block;
+}
+.thumbImage {
+    width: 150px;
+    height: 150px;
+}
+
+#PhotoGallery,
+#WeatherReport {
+    margin-top: 25px;
+}
+
+.locationCityState {
+  color: #7d7d7d;
+  font: italic 14px Georgia,"Times New Roman",Times,serif;
+}
+#WeatherReport .panel-body {
+    overflow: hidden;
+}
+
+.reserveSite {
+    padding: 5px 0;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.reserveSiteImage {
+    margin-bottom: 20px;
+    height: 130px;
+}
+
+.reserveSite .bgimage {
+    text-align:right;
+    color:white;
+    background-size:cover;
+    height: 100%;
+    background-position: center center;
+}
+
+.reserveSite ul[rn-carousel] {
+    width: 210px;
+    height: 130px;
+    margin: 0 auto;
+    border-radius: $borderRadius;
+}
+
+.reserveSite .rn-carousel-control {
+    font-weight: 900;
+    background-color:rgba(0, 169, 244, .5);
+    width: 20px;
+    height: 20px;
+    color: #fff;
+    padding: 5px;
+    line-height: 10px;
+}
+.reserveSite .rn-carousel-control.rn-carousel-control-next {
+    right: 0px;
+    left: auto;
+}
+.reserveSite .rn-carousel-control.rn-carousel-control-prev {
+    left: 0px;
+    right: auto;
+}
+.reserveSite .rn-carousel-indicator {
+    text-align: center;
+    padding: 0 1px;
+}
+.reserveSite .rn-carousel-indicator .active {
+    color: #028dc9;
+}
+
+.colMainPanel {
+    padding: 0;
+    margin: 0 auto;
+}
+
+.colSidePanel {
+    width: 195px;
+    height: 600px;
+    padding: 5px;
+    color: #fff;
+    background-color: rgba(255, 255, 255, .4);
+}
+
+.colSidePanel {
+    max-width: 195px;
+    transition: .8s;
+    overflow: hidden;
+}
+
+.colSidePanel.hidden {
+    max-width: 0;
+    transition: .8s;
+}
+
+.colPadding {
+    padding: 0px;
+}
+
+.marginTop {
+    margin-top: 12px;
+}
+
+.markerDetails{
+    line-height: 7px;
+    padding: 5px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.maki-icon{
+    float: left;
+}
+
+.filterSection {
+    padding:15px;    
+}
+
+.filterCriteria {
+    padding: 10px;
+    color: #fff;
+}
+
+.secondaryFilter {
+    padding: 10px;
+    width: 400px;
+    position: absolute;
+    right: 0px;
+    top: 20px;
+}
+
+.filterInput {
+    max-width: 150px;
+    color: #000;
+}
+
+.secondaryFilter,
+.section {
+    background-color: rgba(0, 0, 0, .5);
+    margin-bottom: 10px;
+    z-index: 1;  
+}
+
+.sectionTitle {
+    padding: 8px 0;
+    margin: 0 auto;
+    text-align: center;
+    border-bottom: 1px solid;
+}
+
+.sectionList {
+    padding: 5px 15px;
+}
+
+.item {
+    margin: 2px;
+    padding: 2px;
+    border: 1px, solid;
+    background-color: rgba(0, 0, 0, .5);
+    display: block;
+}
+
+.remove{
+    color: #fff;
+}
+
+.socialMedia .icon {
+    float: left;
+    margin: 0px 5px;
+}
+
+.socialMedia a:hover,
+.socialMedia a:focus {
+    color: #666;
+}
+
+.panelLink {
+    font-size: 14px;
+}
+
+#CampDetail .thumb {
+    margin: 0 8px 8px 0;
+}
+
+.content-detail {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff;
+    margin: 0 auto;
+}
+
+.ratings {
+    font-size: 16px;
+    color: #ff9000;
+}
+
+.ratingsAverage {
+    font-size: 20px;
+    color: #ff9000;
+}
+.avgRatingContainer .ratingsAverage {
+    font-size: 15px;
+}
+.avgRatingContainer {
+    margin: 30px 0 0 0;
+}
+.review {
+    overflow: auto;
+    margin-bottom: 10px;
+}
+
+.modal-header {
+    background-color: #428bca;
+    color: #fff;
+}
+
+.modal-footer {
+    margin-top: 50px;
+}
+
+.modal .close {
+    filter: alpha(opacity=80);
+    opacity: .8;
+    color: #fff;
+}
+.reviewSummary {
+    width: 24%;
+    padding-top: 10px;
+}
+
+.reviewSummary .name {
+    color: #4f9532;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: normal;
+}
+
+.reviewSummary .org {
+    width: 100%;
+    color: #6890c5;
+    font-size: 12px;
+}
+
+.reviewQuote {
+    text-align: left;
+    color: #9f9f9f;
+    font-size: 14px;
+    line-height: 18px;
+    width: 75%;
+    padding: 10px;
+}
+
+.reviewQuote p {
+    font-size: 14px;
+}
+
+.reviewQuote blockquote {
+    border: 0px;
+    padding: 0px;
+}
+
+.reviewQuote .fa-quote-left,
+.reviewQuote .fa-quote-right {
+    font-size: 20px;
+}
+
+.reviewQuote .fa-quote-left {
+    margin-right: 10px;
+}
+
+.reviewQuote .fa-quote-right {
+    margin-left: 10px;
+}
+
+#ExploreConnect .date {
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    font-size: 16px;
+    color: #989898;
+    line-height: 27px;
+    font-weight: 600;
+    border: 1px solid #989898;
+    margin-right: 10px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0)), color-stop(100%,rgba(220,230,237,1)));
+}
+
+#ExploreConnect .list-group {
+    margin-top: 20px;
+}
+
+.positionContext {
+    position: relative;
+}
+
+.recApp .tooltip {
+    opacity: 1;
+}
+
+#SiteDetail {
+    padding: 15px 40px;
+    position: relative;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+}
+
+.hasFeature .fa {
+    color: #5fc149;
+}
+.reserveSite .selectedSiteDetails {
+    position: absolute;
+    top: 0px;
+    left: 250px;
+    text-align: left;
+    min-height: 300px;
+}
+.reserveSite .selectedSiteDetails .title {
+    font-weight: 700;
+}
+.reserveSite .selectedSiteDetailList,
+.reserveSite .selectedSiteRatings {
+    text-align: left;
+    max-width: 175px;
+    max-height: 300px;
+    overflow: auto;
+    font-weight: normal;
+    margin: 5px 35px 0 10px;
+    padding-bottom: 20px;
+}
+.locationFeatureList {
+    padding: 0 0 25px 85px;
+}
+.reserveSite .tabContainer {
+    padding-top: 18px;
+}
+.addReview {
+    display: block;
+    margin-top: 10px;
+}
+
+.dateFilter {
+    max-width: 200px;
+}
+.addReview:hover,
+.addReview:focus {
+    text-decoration: underline;
+}
+
+.filterActive {
+  color: #c9453e;
+}
+
+/*Calendar*/
+$availableColor: #b4e5a0;
+$bookedColor: #ECBDAF;
+$checkInColor: #2973b8;
+$checkOutColor: #ed8647;
+$checkInOutBackground: #CCCCCC;
+$arrowColor: #CCCCCC;
+#AvailabilityCalendar {
+  width: 70%;
+}
+#AvailabilityCalendar .calendar {
+  min-height: 220px;
+  margin-bottom: 10px;
+  padding: 10px 0;
+}
+
+#AvailabilityCalendar .calendars {
+  overflow: auto;
+  height: 200px;
+  max-width: 99%;
+}
+
+.availableDate {
+    background-color: $availableColor;
+    cursor: pointer;
+}
+.bookedDate {
+    background-color: $bookedColor;
+    cursor: not-allowed;
+}
+.totalDays {
+    padding-top:10px;
+}
+.availableDate:hover,
+.availableDate:focus {
+    background-color: $checkInColor;
+    color: #ffffff;
+    cursor: se-resize;
+}
+
+.checkout .availableDate:hover,
+.checkout .availableDate:focus {
+    background-color: $checkOutColor;
+    color: #ffffff;
+    cursor: ne-resize;
+}
+.checkInSelectedDate {
+    border-color: $checkInColor;
+    background-color: $checkInOutBackground;
+}
+.checkOutSelectedDate {
+    border-color: $checkOutColor;
+    background-color: $checkInOutBackground;
+}
+.checkInSelectedDate:after,
+.checkOutSelectedDate:after {
+    height: 0;
+    width: 0;
+    content: "\00a0";
+    display: block;
+    left: 8px;
+    top: 0;
+    position: absolute;
+    border-style: solid;
+    border-width: 6px 6px 0 6px;
+    border-color: $checkInColor transparent transparent transparent;
+}
+.checkOutSelectedDate:after {
+    top: auto;
+    bottom: 0;
+    border-width: 0 6px 6px 6px;
+    border-color: transparent transparent $checkOutColor transparent;
+}
+
+.inRangeSelectedDate {
+    border-width: 2px 0;
+    background-color: $checkInOutBackground;
+}
+.selectedDateRange {
+    text-align: left;
+}
+.selectedDateRange .label {
+    width: 100px;
+    font-size: 90%;
+}
+.selectedDateRange .checkInDate,
+.selectedDateRange .checkOutDate {
+    padding: 5px 10px 5px 5px;
+    color: #ffffff;
+    border-color: #000000;
+    width: 75px;
+}
+
+.selectedDateRange .checkInDate {
+    background-color: $checkInColor;
+}
+.selectedDateRange .checkOutDate {
+    background-color: $checkOutColor;
+}
+.selectedDateRange .duration.label {
+    color: $primaryColor;
+}
+
+.totalCost {
+    padding: 20px 0 0 0;
+    margin-top: 20px;
+    border-top: 1px solid #666;
+    .label {
+        color: $primaryColor;
+    }
+}
+
+.cal {
+  display: inline-block;
+  height: 170px;
+  min-height: 140px;
+  margin: 2px 20px;
+}
+.cal table {
+    border-collapse: collapse;
+}
+.cal th, 
+.cal td.cal-head {
+  text-align: center;
+  padding-bottom: 5px;
+  color: #ffffff;
+  background-color: #aaaaaa;
+  border: 0px;
+}
+.cal td {
+  text-align: left;
+  font-size: 0.9em;
+  border: 1px solid #fff;
+  background-color: #efefef;
+}
+.cal .cal-day {
+  padding: 2px 7px;
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid transparent;
+}
+.cal .cal-highlight {
+  background-color: #AAA;
+  color: #FFF;
+}
+.cal .cal-highlight-active {
+  background-color: #222;
+  color: #fff;
+}
+
+.border-box {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.availabilityCalendarLegend {
+  padding: 5px 50px 10px 50px;
+  text-align: right;
+}
+.availabilityCalendarLegend .available {
+  color: $availableColor;
+}
+.availabilityCalendarLegend .booked {
+  color: $bookedColor;
+}
+
+.recApp .mfp-bg {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1042;
+  overflow: hidden;
+  position: fixed;
+  background: #0b0b0b;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+}
+
+.recApp .summary-list li {
+  background-image: url('../images/maincol_520.png');
+  background-repeat: no-repeat;
+  margin-bottom: 28px;
+  padding-top: 28px;
+  width: 100%;
+}

@@ -1,0 +1,19 @@
+<div class="markerPopupContent animate-show">
+    <img class="markerPopUpImage" ng-src="{{siteThumbnail}}" />
+    <div class="markerPopupDetails">
+        <h5 class="markerPopupTitle">Site {{siteDetail.siteIdentifier}} <i title="{{siteDetail.description}}" class="fa {{siteDetail.icon}}"></i></h5>
+        <div class="markerPopupFeatureList">
+            <span class="markerPopupFeatureItem" ng-repeat="feature in detailFeatureIcons track by $index">
+            <i tooltip="{{feature.description}}" tooltip-animation="false" tooltip-popup-delay='1000' class="{{feature.icon}}"></i></span>
+        </div>
+    </div>
+   <br/>
+   <button type="button" class="btn btn-success" ng-click="openSiteDetail('{{siteDetail.siteId}}')">View details</button>
+<br/>
+<!--
+<div style="position: absolute; top: 0px;">
+Site: {{siteDetail.siteIdentifier}}<br/>
+lat: {{marker.lat}}, <br> lng: {{marker.lng}}
+</div>
+-->
+</div>

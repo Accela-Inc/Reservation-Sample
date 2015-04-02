@@ -1,0 +1,7 @@
+<div id="LocationPhotoGallery" ng-controller="LocPhotoGalleryCtrl">
+    <div magnific-popup>
+        <a ng-repeat="photo in locationGallery track by $index" href="{{urlBaseImage}}{{photo.thumbUrl}}" class="thumb">
+            <img class="thumbImage" ng-src="{{urlThumbImage}}{{photo.fullImageUrl}}" href="{{urlThumbImage}}{{photo.fullImageUrl}}" />
+        </a>
+    </div>
+</div>

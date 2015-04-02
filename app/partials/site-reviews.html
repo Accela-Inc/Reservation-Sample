@@ -1,0 +1,28 @@
+<div id="SiteRatings" class="panel panel-default" ng-controller="SiteRatingCtrl">
+    <div class="panel-heading">
+        <h4>Location Reviews
+            <div class="globalFloatRight" tooltip-placement="bottom" tooltip="Average rating">
+                <rating ng-model="rate" max="max" rate="{{reviewListAverage}}" readonly="true" class="ratingsAverage"></rating>
+            </div>
+        </h4>
+    </div>
+    <div class="panel-body positionContext">
+        <div class="review" ng-repeat="review in reviewList">
+            <div class="reviewSummary globalFloatLeft">
+                <div class="ratingIndicator">
+                    <rating ng-model="rate" rate="{{review.rating}}" readonly="true" class="ratings"></rating>
+                </div>
+                <h5 class="name">{{review.reviewBy}}</h5>
+                <div class="org">{{review.reviewByTitle}}</div>
+            </div>
+            <div class="reviewQuote globalFloatRight">
+                <blockquote><p><i class="fa fa-quote-left"></i>
+                    {{review.description}}<i class="fa fa-quote-right globalFloatRight"></i></p></blockquote>
+            </div>
+        </div>
+        <div ng-show="AILoading" class="overlay" >
+            <div class="name">Loading...</div>
+            <div ng-activity-indicator="SpinnerWhite"></div>
+        </div>
+    </div>
+</div>

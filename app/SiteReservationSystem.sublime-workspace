@@ -1,0 +1,1016 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Object",
+				"object"
+			],
+			[
+				"$roo",
+				"$rootScope	AngularJS"
+			],
+			[
+				"getma",
+				"getMarkerIcon"
+			],
+			[
+				"$rout",
+				"$routeParams	AngularJS(DI)"
+			],
+			[
+				"line",
+				"line-height"
+			],
+			[
+				"menu",
+				"menuBgColor"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"background",
+				"background-color"
+			],
+			[
+				"baground",
+				"background-color"
+			],
+			[
+				"bor",
+				"borderRadius"
+			],
+			[
+				"men",
+				"menuBgColor"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"u",
+				"uppercase"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"marg",
+				"margin"
+			],
+			[
+				"case",
+				"caseValue"
+			],
+			[
+				"pres",
+				"presetCoords"
+			],
+			[
+				"rg",
+				"rgba()"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"margn",
+				"margin-bottom"
+			],
+			[
+				"picni",
+				"picnicShelter"
+			],
+			[
+				"CAmp",
+				"CampSitesMap"
+			],
+			[
+				"loc",
+				"location"
+			],
+			[
+				"tot",
+				"totalReservableSites"
+			],
+			[
+				"bck",
+				"background-color"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/src/accela/Site-Reservation-System/client/src/typescript/KinsailRecServer.ts",
+			"settings":
+			{
+				"buffer_size": 6797,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/src/accela/Site-Reservation-System/client/src/typescript/RecreationCore.ts",
+			"settings":
+			{
+				"buffer_size": 16922,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/src/accela/Site-Reservation-System/client/src/index.html",
+			"settings":
+			{
+				"buffer_size": 29443,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "services.js",
+			"settings":
+			{
+				"buffer_size": 15925,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 147.0,
+		"selected_items":
+		[
+			[
+				"grunt",
+				"Grunt"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"packare",
+				"Package Control: Remove Package"
+			],
+			[
+				"pa",
+				"Package Control: Remove Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"grun",
+				"Grunt"
+			],
+			[
+				"gru",
+				"Grunt"
+			],
+			[
+				"gunt",
+				"Grunt"
+			],
+			[
+				"grut",
+				"Grunt"
+			],
+			[
+				"jsl",
+				"JSLint"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"gu",
+				"Gulp"
+			],
+			[
+				"gulp",
+				"Gulp"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"uni",
+				"Grunt: Kill Running Tasks"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"type",
+				"Compile TypeScript"
+			],
+			[
+				"typ",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"Package Control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ins",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: instal",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: rem",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: re",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package Control: remove",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 200.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/src/accela/Site-Reservation-System",
+		"/src/accela/Site-Reservation-System/build",
+		"/src/accela/Site-Reservation-System/client",
+		"/src/accela/Site-Reservation-System/client/src",
+		"/src/accela/Site-Reservation-System/client/src/app",
+		"/src/accela/Site-Reservation-System/client/src/resources",
+		"/src/accela/Site-Reservation-System/client/src/resources/css",
+		"/src/accela/Site-Reservation-System/client/src/typescript"
+	],
+	"file_history":
+	[
+		"/src/accela/Site-Reservation-System/client/src/app/controllers.js",
+		"/src/accela/Site-Reservation-System/client/src/resources/css/styles.scss",
+		"/src/accela/Site-Reservation-System/client/src/typescript/KinsailRecServer.ts",
+		"/src/accela/Site-Reservation-System/client/src/app/directives.js",
+		"/src/accela/Site-Reservation-System/client/src/app/services.js",
+		"/src/accela/Site-Reservation-System/client/src/index.html",
+		"/src/accela/Site-Reservation-System/client/src/app/app.js",
+		"/src/accela/Site-Reservation-System/Gruntfile.js",
+		"/src/accela/Site-Reservation-System/client/src/resources/css/styles.css",
+		"/src/accela/Site-Reservation-System/client/src/app/partials/site-marker-popup-content.html",
+		"/src/accela/Site-Reservation-System/client/src/typescript/RecreationTestHarness.ts",
+		"/src/accela/Site-Reservation-System/client/src/typescript/RecreationCore.ts",
+		"/src/accela/Site-Reservation-System/client/src/resources/external/angular/extras/angular-leaflet-directive.js",
+		"/src/accela/Site-Reservation-System/dist/index.html",
+		"/src/accela/Site-Reservation-System/build/build.config.js",
+		"/src/accela/Site-Reservation-System/client/src/resources/external/nps/maki-sprite.css",
+		"/src/accela/Site-Reservation-System/client/src/resources/external/angular/angular.js",
+		"/Users/mcaron/Documents/scratch.json",
+		"/src/accela/Site-Reservation-System/client/src/app/partials/location-gallery.html",
+		"/Applications/MAMP/conf/apache/httpd.conf",
+		"/Applications/MAMP/conf/apache/extra/httpd-vhosts.conf",
+		"/src/sandbox/popupSample.html",
+		"/src/accela/Site-Reservation-System/client/src/app/partials/availability-calendar.html",
+		"/src/accela/Site-Reservation-System/client/src/resources/css/calendar.less",
+		"/src/accela/Site-Reservation-System/client/src/resources/css/calendar.scss",
+		"/Users/mcaron/Documents/scratch.js",
+		"/src/accela/Site-Reservation-System/client/src/app/filters.js",
+		"/src/accela/Site-Reservation-System/build/resources/js/services-min.js",
+		"/src/accela/Site-Reservation-System/client/src/app/partials/my-itinerary.html",
+		"/src/libraries/angular-leaflet-directive/src/directives/markers.js",
+		"/src/libraries/angular-leaflet-directive/examples/markers-update-example.html",
+		"/src/libraries/angular-leaflet-directive/examples/markers-delayed-events-example.html",
+		"/src/accela/Site-Reservation-System/client/src/json/sitesSample.json",
+		"/src/sandbox/code_samples/angular/angular-phonecat/app/js/app.js",
+		"/src/sandbox/code_samples/angular/angular-phonecat/app/js/controllers.js",
+		"/src/sandbox/code_samples/angular/angular-phonecat/app/partials/phone-detail.html",
+		"/src/sandbox/code_samples/angular/angular-phonecat/app/js/services.js",
+		"/src/accela/Site-Reservation-System/client/src/json/itineraryItems.json",
+		"/src/accela/Site-Reservation-System/client/src/json/locItems.json",
+		"/src/accela/ksbeta/rec/site-page.html",
+		"/src/accela/ksbeta/rec/css/style.css",
+		"/src/accela/ksbeta/rec/location.html",
+		"/src/accela/ksbeta/rec/app.css",
+		"/src/accela/ksbeta/rec/index.html",
+		"/src/accela/Site-Reservation-System/client/src/app/partials/scratch.html",
+		"/src/sandbox/code_samples/angular/ng-scope-explanaition",
+		"/Users/mcaron/Documents/a11yGeneral/WebA11YPatterns_wiki.txt",
+		"/Users/mcaron/Documents/Accela/scripts/Master Script Distribution V2.0_6577/Scripts/INCLUDES_ACCELA_GLOBALS.js",
+		"/Users/mcaron/Documents/Accela/scripts/Master Script Distribution V2.0_6577/Scripts/ApplicationStatusUpdateAfter.js",
+		"/src/accela/Site-Reservation-System/client/bower_components/angularjs-dropdown-multiselect/pages/stylesheets/print.css",
+		"/src/accela/Site-Reservation-System/.gitignore",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/User/SublimeGrunt.sublime-settings",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/Grunt/SublimeGrunt.sublime-settings",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/TypeScript Compiler/TypeScript Compiler.sublime-settings",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/AngularJS/AngularJS-sublime-package.sublime-settings",
+		"/src/accela/Site-Reservation-System/requirements/Notes form Rec discussion 10:23",
+		"/src/accela/Site-Reservation-System/src/typescript/RecreationTestHarness.ts",
+		"/src/accela/Site-Reservation-System/src/resources/css/styles.scss",
+		"/src/accela/Site-Reservation-System/src/app/controllers.js",
+		"/src/accela/Site-Reservation-System/src/app/directives.js",
+		"/src/accela/Site-Reservation-System/src/typescript/RecreationCore.ts",
+		"/Users/mcaron/Downloads/angular-kickstart-1.0.1/client/test/utils.js",
+		"/src/accela/Site-Reservation-System/src/app/app.js",
+		"/src/accela/Site-Reservation-System/src/app/services.js",
+		"/src/accela/Site-Reservation-System/src/index.html",
+		"/src/accela/Site-Reservation-System/src/resources/external/kendo/kendo.default.less",
+		"/src/accela/Site-Reservation-System/src/resources/css/theme-template.scss",
+		"/src/accela/Site-Reservation-System/src/resources/css/theme-template.css",
+		"/src/accela/Site-Reservation-System/src/resources/css/theme-template-new.scss",
+		"/src/accela/Site-Reservation-System/src/app/filters.js",
+		"/src/accela/Site-Reservation-System/src/app/partials/my-itinerary.html",
+		"/src/accela/Site-Reservation-System/src/resources/css/theme.less",
+		"/src/libraries/kendo-ui-core-master/styles/web/theme-template.less",
+		"/src/libraries/angular-material-master/themes/default-theme.scss",
+		"/src/accela/Site-Reservation-System/src/resources/css/styles.css",
+		"/Users/mcaron/Documents/scratch.txt",
+		"/src/accela/Site-Reservation-System/src/resources/css/animations.scss",
+		"/src/accela/Site-Reservation-System/src/app/partials/site-marker-popup-content.html",
+		"/src/accela/Site-Reservation-System/src/resources/css/animations.css",
+		"/src/sandbox/code_samples/angular/angular-scope-example-source/index.html",
+		"/src/sandbox/code_samples/angular/angular-scope-example-source/script.js",
+		"/src/accela/Site-Reservation-System/src/resources/app/directives.js",
+		"/src/accela/Site-Reservation-System/src/resources/app/services.js",
+		"/src/accela/Site-Reservation-System/src/resources/app/controllers.js",
+		"/src/accela/Site-Reservation-System/test/karma.config.js",
+		"/src/accela/Site-Reservation-System/karma.conf.js",
+		"/src/accela/Site-Reservation-System/_SpecRunner.html",
+		"/src/accela/Site-Reservation-System/src/partials/my-itinerary.html",
+		"/src/accela/Site-Reservation-System/src/resources/css/app.css",
+		"/src/libraries/angular-bootstrap-ui/ui-bootstrap-tpls-0.11.2.js",
+		"/src/accela/Site-Reservation-System/src/resources/app/app.js",
+		"/src/accela/Site-Reservation-System/src/partials/scratch.html",
+		"/src/libraries/angular-leaflet-directive-master/dist/angular-leaflet-directive.js",
+		"/src/accela/Site-Reservation-System/src/partials/site-reviews.html",
+		"/src/accela/Site-Reservation-System/src/partials/itinerary.html",
+		"/src/accela/Site-Reservation-System/src/partials/site-marker-popup-content.html",
+		"/src/accela/Site-Reservation-System/src/partials/loading-indicator.html",
+		"/src/accela/Site-Reservation-System/src/partials/location-gallery.html",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/HTMLBeautify/HTMLBeautify.sublime-settings",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/HTML-CSS-JS Prettify/HTMLPrettify.sublime-settings",
+		"/src/accela/Site-Reservation-System/src/resources/css/styles.less.css",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/Less2Css/less2css.sublime-settings",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/LESS/LESS.sublime-settings",
+		"/Users/mcaron/Library/Application Support/Sublime Text 2/Packages/Git/Git.sublime-settings",
+		"/src/libraries/angular-carousel-master/src/directives/rn-carousel-indicators.js",
+		"/src/libraries/angular-carousel-master/src/directives/rn-carousel.js",
+		"/src/libraries/angular-carousel-master/index.html",
+		"/src/libraries/angular-carousel-master/demo/demo.css",
+		"/src/libraries/angular-carousel-master/src/angular-carousel.js",
+		"/src/accela/Site-Reservation-System/src/resources/external/angular/extras/angularjs-dropdown-multiselect.js",
+		"/src/accela/Site-Reservation-System/test/unit/testOne.js",
+		"/src/accela/Site-Reservation-System/package.json",
+		"/src/libraries/angular-leaflet-directive-master/examples/legend-example.html",
+		"/src/accela/Site-Reservation-System/test/protractor.config.js",
+		"/src/accela/Site-Reservation-System/test/spec/spec.js",
+		"/src/libraries/leaflet/plugins/Leaflet.awesome-markers-2.0-develop/examples/basic-example.html",
+		"/src/accela/Site-Reservation-System/src/resources/js/compiled/RecreationTestHarness.js",
+		"/src/libraries/angular-leaflet-directive-master/examples/markers-update-example.html",
+		"/src/libraries/angular-leaflet-directive-master/examples/markers-icon-example.html",
+		"/src/libraries/angular-leaflet-directive-master/examples/markers-events-example.html",
+		"/src/accela/Site-Reservation-System/test/karma-unit.conf.js",
+		"/src/accela/Site-Reservation-System/test/protractor.conf.js",
+		"/src/libraries/angular-leaflet-directive-master/src/services/leafletEvents.js",
+		"/src/libraries/angular-leaflet-directive-master/src/directives/markers.js",
+		"/src/libraries/angular-leaflet-directive-master/src/services/leafletMarkersHelpers.js",
+		"/src/accela/Site-Reservation-System/src/resources/css/style.css",
+		"/src/libraries/npmap-builder-master/css/app.css",
+		"/src/libraries/angular-leaflet-directive-master/src/directives/eventBroadcast.js"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/src/accela/Site-Reservation-System",
+			"/src/accela/Site-Reservation-System/client/src/app/partials",
+			"/src/accela/Site-Reservation-System",
+			"/src/accela/Site-Reservation-System/client",
+			"/src/accela/Site-Reservation-System",
+			"/src/libraries/angular-leaflet-directive/src",
+			"/src/libraries/angular-leaflet-directive",
+			"/src/accela/Site-Reservation-System",
+			"/Users/mcaron/Documents/Accela/scripts/Master Script Distribution V2.0_6577/Scripts",
+			"/src/accela/Site-Reservation-System",
+			"/src/accela/Site-Reservation-System/src",
+			"/src/libraries/kendo-ui-core-master",
+			"/src/accela/Site-Reservation-System",
+			"/src/accela/Site-Reservation-System/src",
+			"/src/accela/Site-Reservation-System",
+			"/src/accela/Site-Reservation-System/src",
+			"/src/libraries/angular-carousel-master/src",
+			"/src/accela/Site-Reservation-System",
+			"/src/libraries/angular-carousel-master",
+			"/src/accela/Site-Reservation-System/src",
+			"/src/libraries/angular-leaflet-directive-master",
+			"/src/libraries/angular-leaflet-directive-master/src",
+			"/src/libraries/angular-leaflet-directive-master/src/directives",
+			"/src/libraries/angular-leaflet-directive-master/src",
+			"/src/accela/reservations",
+			"/src/accela/reservations/src",
+			"/src/sandbox/code_samples/angular/movieApp",
+			"/src/sandbox/code_samples/angular/angular-gemstore-gh-pages",
+			"/src/accela/reservations/src"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"filterSitesByAttribute",
+			"unCheckAllAttributes",
+			"applyTypeAttributeFilter",
+			"checkAllTypes",
+			"convertFilterArray",
+			"setSiteAttributes",
+			"filterValuesAttribute",
+			"filterSitesByAttribute",
+			"filterValuesAttribute",
+			"checkAllAttributes",
+			"SiteDetail",
+			"filterSitesByAttribute",
+			"siteAttributes",
+			"FeatureAttribute",
+			"angular.forEach($scope.siteTypes",
+			"angular.forEach($scope.siteAttributes",
+			"getShadeType",
+			"isTypeCheckbox",
+			"siteAttributes",
+			"getSiteAttributeList",
+			"checkAllTypes",
+			"filterValuesAttribute",
+			"getSiteAttributeList",
+			"filterValues",
+			"AttributeFilter",
+			"filterSites",
+			"$scope.filterValues",
+			"siteTypes",
+			"each",
+			".each",
+			"convertFilterArray",
+			"$scope.siteTypes",
+			"getSiteTypeList",
+			"new query",
+			"Query",
+			"siteDeta",
+			"filterSite",
+			"getSiteDetailForFilter",
+			"setCheck",
+			"isAfter",
+			"validateRange",
+			"calcu",
+			"format",
+			"isDateAvailable",
+			"isDateActionable",
+			".add(1, 'days')",
+			"isDateAvailable",
+			"getAvailabilityDates",
+			"unavailableDates",
+			"isBetween",
+			"calculateCost",
+			"SiteDetail",
+			"reservesi",
+			"tabCont",
+			"animate-show",
+			"reservationDa",
+			"uild:remove:prod",
+			"map.htm",
+			"tabcon",
+			"cancel",
+			"SiteDetail",
+			"id=\"sitedet",
+			"siteDetail",
+			"modal",
+			"detail",
+			"siteDetail",
+			"SiteDetailCtrl",
+			"ModalInstanceCtrl",
+			"resource",
+			"modal",
+			"reservationDatepicker",
+			"login",
+			"review",
+			"wheel",
+			"selectMarker",
+			"listenMarkerEvents",
+			"listen",
+			"popupopen",
+			"broadcast",
+			"popupop",
+			"TB1LoadingCtrl",
+			"getAttributeList",
+			"getSiteAttributes",
+			"getSiteDetail",
+			"getReviews",
+			"recServerTest",
+			"glyphicon",
+			"please",
+			"<link rel=\"stylesheet\" type=\"text/css\" href=\"",
+			"\" />",
+			"<link rel=\"stylesheet\" type=\"text/css\" href=\"",
+			"app.m",
+			"\"></script>",
+			"<script type=\"text/javascript\" src=\"",
+			"siteReservationApp",
+			"\"></script>",
+			"<script type=\"text/javascript\" src=\"",
+			"contrib",
+			"sitesSample.json",
+			"build/js",
+			"build",
+			"setdef",
+			"iconSize",
+			"text-align: ri",
+			".reserveSite .selectedSiteDetails",
+			"plug",
+			"getdura",
+			"checkInDate",
+			"setCheckInDate",
+			"checkInDate",
+			"durationInstruction",
+			"total cost",
+			"marker",
+			"septic",
+			"pet",
+			"new FeatureAttribute<boolean>(\"",
+			"icon",
+			"leafletMarkersHelpers",
+			"markerName",
+			".selectedDateRange .label",
+			"$scope.duration",
+			"totalCost",
+			"checkinActive",
+			"checkInDate",
+			"Depature",
+			"depart",
+			"minDuration",
+			"click"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"getSiteAttributeList",
+			"',",
+			"'client/src/",
+			"',",
+			"'client/src/",
+			"',",
+			"'client/src/",
+			"dist",
+			"",
+			"console.log",
+			"MainController",
+			"$",
+			"dateService",
+			"reservationDateService",
+			"reserveDateService",
+			"recService",
+			"recServer",
+			"applyMapFilter",
+			"siteReservationFilters",
+			"",
+			"kinsailContainer",
+			"#{\"\\1\"}",
+			"@include \\1",
+			"@mixin \\1\\(\\2\\)\\n{",
+			"$",
+			"@media",
+			"$",
+			"",
+			"$",
+			"availability",
+			"0.25s",
+			"borderRadius",
+			"arrowBorderColor",
+			"arrowColor",
+			"fontStack",
+			"primaryColor",
+			"menuDateFilter",
+			"menuLogin",
+			"menuItinerary",
+			"app",
+			"app/partials/",
+			"",
+			"},",
+			", lng:",
+			"{lat:",
+			"],",
+			"[",
+			"siteDetail",
+			"_testHarness",
+			"getSiteGallery",
+			"getSiteSiteGallery",
+			"getLocationGallery",
+			"}}, {",
+			"extras",
+			"\",",
+			"price",
+			"filterPanel",
+			"myTestAnimate",
+			"",
+			"element",
+			"[]",
+			"sites",
+			"'src/resources/"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/src/accela/Site-Reservation-System/client/src/typescript/KinsailRecServer.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6797,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5140,
+								5140
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1052.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/src/accela/Site-Reservation-System/client/src/typescript/RecreationCore.ts",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 16922,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8253,
+								8261
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/TypeScript/TypeScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 14.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/src/accela/Site-Reservation-System/client/src/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								11947,
+								11957
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3006.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "services.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15925,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8391,
+								8391
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3718.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 227.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "SiteReservationSystem.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"leafletdi",
+				"client/src/resources/external/angular/extras/angular-leaflet-directive.js"
+			],
+			[
+				"recreationcore",
+				"client/src/typescript/RecreationCore.ts"
+			],
+			[
+				"recreation",
+				"client/src/typescript/RecreationTestHarness.ts"
+			],
+			[
+				"recre",
+				"client/src/typescript/RecreationTestHarness.ts"
+			],
+			[
+				"recrea",
+				"client/src/typescript/RecreationCore.ts"
+			],
+			[
+				"styles.scs",
+				"client/src/resources/css/styles.scss"
+			],
+			[
+				"site-marker-popup-content.html",
+				"Site-Reservation-System/client/src/app/partials/site-marker-popup-content.html"
+			],
+			[
+				"scrat",
+				"Site-Reservation-System/client/src/app/partials/scratch.html"
+			],
+			[
+				"app.css",
+				"client/bower_components/angularjs-dropdown-multiselect/pages/stylesheets/print.css"
+			],
+			[
+				"directive",
+				"Site-Reservation-System/src/app/directives.js"
+			],
+			[
+				"controlle",
+				"Site-Reservation-System/src/app/controllers.js"
+			],
+			[
+				"theme-tem",
+				"Site-Reservation-System/src/resources/css/theme-template.scss"
+			],
+			[
+				"theme-temp",
+				"Site-Reservation-System/src/resources/css/theme-template.css"
+			],
+			[
+				"theme-templ",
+				"libraries/kendo-ui-core-master/styles/web/theme-template.less"
+			],
+			[
+				"theme-te",
+				"libraries/angular-material-master/themes/default-theme.scss"
+			],
+			[
+				"animation.scs",
+				"Site-Reservation-System/src/resources/css/animations.scss"
+			],
+			[
+				"animation.css",
+				"Site-Reservation-System/src/resources/css/animations.css"
+			],
+			[
+				"testharne",
+				"Site-Reservation-System/src/typescript/RecreationTestHarness.ts"
+			],
+			[
+				"scratch",
+				"Site-Reservation-System/src/partials/scratch.html"
+			],
+			[
+				"legend-example.html",
+				"libraries/angular-leaflet-directive-master/examples/legend-example.html"
+			],
+			[
+				"markers-update-example.html",
+				"libraries/angular-leaflet-directive-master/examples/markers-update-example.html"
+			],
+			[
+				"markers-icon-example.html",
+				"libraries/angular-leaflet-directive-master/examples/markers-icon-example.html"
+			],
+			[
+				"markers-events-example.html",
+				"libraries/angular-leaflet-directive-master/examples/markers-events-example.html"
+			],
+			[
+				"leafletmar",
+				"libraries/angular-leaflet-directive-master/src/services/leafletMarkersHelpers.js"
+			],
+			[
+				"scratc",
+				"Site-Reservation-System/src/partials/scratch.html"
+			],
+			[
+				"angular-drop",
+				"reservations/bower_components/angularjs-dropdown-multiselect/src/angularjs-dropdown-multiselect.js"
+			],
+			[
+				"angular-dr",
+				"reservations/src/resources/external/angular/plugins/angularjs-dropdown-multiselect.js"
+			],
+			[
+				"recreationte",
+				"reservations/src/typescript/RecreationTestHarness.ts"
+			],
+			[
+				"markers-dynamic-addremove-example.html",
+				"code_samples/angular/angular-leaflet-directive-master/examples/markers-dynamic-addremove-example.html"
+			],
+			[
+				"markers-add-example.html",
+				"code_samples/angular/angular-leaflet-directive-master/examples/markers-add-example.html"
+			],
+			[
+				"marker-update",
+				"code_samples/angular/angular-leaflet-directive-master/examples/markers-update-example.html"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 225.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

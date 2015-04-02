@@ -1,0 +1,331 @@
+<!doctype html>
+<html xmlns:ng="http://angularjs.org" id="ng-app" ng-app="siteReservationApp">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Wichita Mountain Site Reservations</title>
+
+<!-- build:css resources/css/style.css -->
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/animations.css">
+    <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/angular_material/0.8.2/angular-material.min.css">
+<!-- /build -->
+
+<!-- build:css resources/external/css/lib.grp.css -->
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/ng-scrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/select.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/ngActivityIndicator.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/angular-carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/angular-motion.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="resources/external/jquery/jquery-ui.min.css">
+
+    <link rel="stylesheet" type="text/css" href="resources/external/kendo/kendo.common.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/kendo/kendo.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/jquery/plugins/jquery.magnific-popup.css" />
+
+<!-- /build -->
+
+    <link rel="stylesheet" type="text/css" href="resources/external/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/bootstrap/css/bootstrap.icon-large.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/leaflet/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/nps/maki-sprite.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/leaflet/plugins/L.Control.Sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/leaflet/plugins/leaflet.awesome-markers.css">
+    <link rel="stylesheet" type="text/css" href="resources/external/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" />
+    
+</head>
+<body class="pageWrapper recApp fadeIn" ng-controller="MainCtrl as main" ng-click="closeMenus($event, true)" ng-keyup="keyup($event)" ng-style="{'background-image':'url({{backgroundPhoto}})'}">
+
+<div class="bgImageOverlay">
+
+<!-- Begin Header Navigation -->
+<nav id="AppNav" class="navbar navbar-default" role="navigation" ng-controller="NavBarCtrl as navbar">
+<a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+<div id="header" class="clearfix">
+    <h1 id="organisation">
+        <a href="http://www.fws.gov/">
+            <img ng-src="{{logo}}" height="95px" width="264px" alt="U.S. Fish &amp; Wildlife Service">
+        </a>
+    </h1>
+    <h2 id="refuge" title="Wichita Mountains">
+        <a href="http://www.fws.gov/refuge/Wichita_Mountains/" title="Wichita Mountains">Wichita Mountains</a><span id="refuge_state">Wildlife Refuge | {{locationName}}</span></h2>
+        <a class="customBrand navbar-brand" href="{{url}}/wichita">
+            <img ng-src="{{logo_secondary}}" alt="" class="brandImage" title="logo" />
+        </a>
+        <div id="search-bar"></div>
+</div>
+
+</nav>
+<!-- End Header Navigation -->
+
+<!-- <div layout="row" layout-sm="column">
+  <div flex>
+    I'm above on mobile, and to the left on larger devices.
+  </div>
+  <div flex>
+    I'm below on mobile, and to the right on larger devices.
+  </div>
+</div> -->
+
+<!-- Begin Content -->
+<div id="Content" class="container">
+    <div class="row">&nbsp;</div>
+
+    <div ng-view class="view-animate"></div>
+
+    <script type="text/ng-template" id="default.html"><span style="height: 0px;"></span></script>
+
+    <script type="text/ng-template" id="sitedetail.html">
+    <!-- Begin SiteDetails -->
+    <div class="row">
+        <div id="SiteDetail" class="animate-show view-animate">
+            <div class="globalRoundedCorners">
+                <h4 class="modal-title">Site {{siteDetail.siteIdentifier}}</h4>
+                <div class="reserveSite">
+                    <div class="globalFloatLeft siteImages">
+                        <div class="reserveSiteImage">
+                            <ul rn-carousel rn-carousel-buffered rn-carousel-controls rn-carousel-index="carouselIndex" class="image">
+                              <li ng-repeat="photo in siteGallery track by $index">
+                                <div ng-style="{'background-image': 'url({{locationId}}/resources/images/site/' + photo + ')'}"  class="bgimage"></div>
+                              </li>
+                            </ul>
+                            <div rn-carousel-indicators ng-if="siteGallery.length > 1" slides="siteGallery" rn-carousel-index="carouselIndex"></div>
+                        </div>
+                        <div class="totalCost"><span class="label">{{subTotalText}}</span> {{reserveCost | currency}}</div>
+                         <ul ng-model="detailFeatureList" class="selectedSiteDetailList">
+                            <li class="hasFeature" ng-repeat="feature in detailFeatureList track by $index">
+                                <i class="fa fa-check"></i> {{feature.bullet}}</li>
+                        </ul>
+                    </div>
+
+                    <div id="AvailabilityCalendar" class="globalFloatRight" ng-controller="CalendarCtrl">
+                        <div class="selectedDateRange">
+                            <span class="globalRoundedCorners checkInDate"><span class="label">Arrival:</span> {{checkInDate}}</span>&nbsp;-&nbsp;
+                            <span class="globalRoundedCorners checkOutDate"><span class="label">Depature:</span> {{checkOutDate}}</span>
+                            <div class="totalDays">{{rangeMsg}}</div>
+                        </div>
+                        <div class="availabilityCalendarLegend">
+                            <span><i class="fa fa-circle available"></i> Available</span>
+                            <span><i class="fa fa-circle booked"></i> Not Available</span>
+                        </div>
+                        <div class="calendars">                    
+                            <availability-calendar><span></span></availability-calendar>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer globalClear">
+                    <button class="btn btn-warning" ng-click="closeSiteDetail()">Cancel</button>
+                    <button class="btn btn-primary" ng-disabled="checkoutBtnDisabled" ng-click="checkout($event)">Reserve Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End SiteDetails -->
+    </script>
+
+    <!-- Begin Map -->
+    <div ng-controller="SiteMapCtrl">
+        <div class="row">
+            <div id="FilterPanel" class="section globalRoundedCornersTop">
+                <div class="btn-group">Find a camp site: </div>
+                <div class="btn-group">
+                    <button type="button" ng-click="toggleSiteFilterMenu($event)" class="btn filterBtn">
+                    Site <span class="caret"></span>
+                    </button>
+                    <div id="SiteFilter" class="globalRoundedCorners menu animate-show arrow_box arrow_top" ng-show="menuSiteFilter">
+                        <ul class="filterContainer" role="menu">
+                            <li ng-repeat="site in siteList track by $index">
+                                <a class="link" href="javascript:void(0);" ng-click="selectMarker(site.siteId)"><i ng-class="getMarkerIcon(site.type)"></i> {{site.siteIdentifier}}</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button type="button" ng-click="toggleAttributeFilterMenu($event)" class="btn filterBtn">
+                    <i ng-show="filterAttributeActive" class="fa fa-filter filterActive"></i>
+                    Attributes <span class="caret"></span>
+                    </button>
+                    <div id="AttributeFilter" ng-click="cancelBubble($event)" class="globalRoundedCorners menu animate-show arrow_box arrow_top" ng-show="menuAttributeFilter">
+                        <ul role="menu" class="globalFloatLeft list">
+                            <li><h4>Site Type</h4></li>
+                            <li ng-repeat="type in siteTypes">
+                                <label>
+                                    <input type="checkbox" ng-click="filterSitesByType($event, {{type.value}})" checklist-model="filters.types" checklist-value="type"> {{type.description}} 
+                                </label>
+                            </li>
+                        </ul>
+                        <ul role="menu" class="globalFloatRight list">
+                            <li><h4>Site Features</h4></li>
+                            <li ng-repeat="attribute in siteAttributes track by $index">
+                                <span ng-if="isTypeCheckbox(attribute.value)">
+                                    <label>
+                                        <input type="checkbox" ng-click="filterSitesByAttribute($event)" checklist-model="filters.attributes" checklist-value="attribute"> {{attribute.description}}
+                                    </label>
+                                </span>
+<!--
+                                <span ng-if="isTypeSelect(attribute.name)"> 
+                                    <div>
+                                        <label>Shade Type: </label>
+                                        <select ng-options="type as type.name for type in shadeTypes" ng-model="selectedShadeType" ng-change="filterShadeType()"></select>
+-->
+<!-- 
+                                        <select ng-change="filterSitesByAttribute($event)" ng-model="filters.attributes" ng-options="shade.name for shade in shadeTypes"></select>
+                                    </div>
+                                </span>
+-->
+                            </li>
+                        </ul>
+<!--
+                        <ul role="menu" class="globalFloatRight list" ng-click="cancelBubble($event)">
+                            <li><h4>Availability</h4></li>
+                            <li>
+                                <div class="datePickerFilter">
+                                    <label for="dtFilterFrom" class="labelTop">Check-in</label>
+                                    <input id="dtFilterFrom" kendo-date-picker ng-model="filters.availability.reservationStart" />
+                                </div>
+                                <div class="datePickerFilter">
+                                    <label for="dtFilterTo" class="labelTop">Check-out</label>
+                                    <input id="dtFilterTo" kendo-date-picker ng-model="filters.availability.reservationEnd" />
+                                </div>
+                            </li>
+                        </ul>
+-->
+                        <div class="menuBtnGroup globalFloatRight">
+                            <button type="button" ng-click="resetFilterSites($event)" class="btn btn-default">
+                            Reset</button>
+                            <button type="button" ng-click="applyFilter($event, true)" class="btn btn-warning">
+                            Apply</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="btn-group">
+                    <div>
+                        <button type="button" ng-click="toggleDateFilterMenu($event)" class="btn filterBtn">
+                        <i ng-show="filterDateActive" class="fa fa-filter filterActive"></i> Availability <span class="caret"></span>
+                        </button>
+                        <div id="DateFilter" class="globalRoundedCorners menu animate-show arrow_box arrow_top" ng-click="cancelBubble($event)" ng-show="menuDateFilter">
+                            <div class="datePickerFilter">
+                                <label for="dtFilterFrom" class="labelTop">Check-in</label>
+                                <input id="dtFilterFrom" kendo-date-picker ng-model="filters.availability.reservationStart" />
+                            </div>
+                            <div class="datePickerFilter">
+                                <label for="dtFilterTo" class="labelTop">Check-out</label>
+                                <input id="dtFilterTo" kendo-date-picker ng-model="filters.availability.reservationEnd" />
+                            </div>
+                            <div class="globalFloatRight menuBtnGroup">
+                                <button type="button" ng-click="resetDateFilter($event)" class="btn btn-default">
+                                Reset</button>
+                                <button type="button" ng-click="applyDateFilter($event, true)" class="btn btn-warning">
+                                Apply</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="CampSitesMap" class="mapContainer">
+                <leaflet 
+                event-broadcast="events" 
+                markers="markers" 
+                tiles="tiles"
+                defaults="defaults"></leaflet>
+            </div>
+        </div>
+    </div>
+    <!-- End map -->
+
+
+    <!-- Begin Location Photo Gallery -->
+    <div class="row">
+        <div id="PhotoGallery" class="panel panel-default photoGallery">
+            <div class="panel-heading">
+                <h4>{{locationName}} <span class="locationCityState">{{locationCityState}}</span></h4>
+            </div>
+            <div class="panel-body">
+                {{locationDescription}}
+            </div>
+            <div class="panel-body">
+                <location-gallery><location-gallery>
+            </div>
+            <div class="panel-body">
+                <ul ng-model="locationFeatures" class="locationFeatureList">
+                    <li class="hasFeature" ng-repeat="feature in locationFeatures track by $index">
+                    <i class="fa fa-check"></i> {{feature.bullet}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- End Location Photo Gallery -->
+
+</div>
+
+<div ng-show="AILoading" class="overlay pageOverlay">
+    <div class="loadingContainer">
+        <div class="name">Loading...</div>
+        <div ng-activity-indicator="SpinnerWhite"></div>
+    </div>
+</div>
+
+<!-- build:js resources/external/js/lib.jquery.grp.js -->
+<script type="text/javascript" src="resources/external/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="resources/external/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="resources/external/jquery/plugins/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="resources/external/jquery/plugins/jquery.slimscroll.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.core.grp.js -->
+<script type="text/javascript" src="resources/external/angular/angular.min.js"></script>
+<script type="text/javascript" src="resources/external/lodash/lodash.min.js"></script>
+<script type="text/javascript" src="resources/external/kendo/kendo.all.min.js"></script> 
+<script type="text/javascript" src="resources/external/moment/moment.min.js"></script>
+<script type="text/javascript" src="resources/external/moment/moment-range.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.angular.grp.js -->
+<script type="text/javascript" src="resources/external/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-resource.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-animate.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-touch.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.angular.extras.grp.js -->
+<script type="text/javascript" src="resources/external/angular/extras/angular-leaflet-directive.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/date.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/select.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/ui-bootstrap-tpls-0.11.2.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/angularjs-dropdown-multiselect.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/ngActivityIndicator.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/angular-carousel.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/restangular.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.leaflet.grp.js -->
+<script type="text/javascript" src="resources/external/leaflet/leaflet.js"></script>
+<script type="text/javascript" src="resources/external/leaflet/plugins/L.Control.Sidebar.js"></script>
+<script type="text/javascript" src="resources/external/leaflet/plugins/leaflet.awesome-markers.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/js/ts.grp.js -->
+<script type="text/javascript" src="resources/js/compiled/RecreationCore.js"></script>
+<script type="text/javascript" src="resources/js/compiled/KinsailRecServer.js"></script>
+<script type="text/javascript" src="resources/js/compiled/RecreationTestHarness.js"></script>
+<!-- /build -->
+
+<!-- build:js app/app.grp.js -->
+<script type="text/javascript" src="app/app.js"></script>
+<script type="text/javascript" src="app/controllers.js"></script>
+<script type="text/javascript" src="app/directives.js"></script>
+<script type="text/javascript" src="app/services.js"></script>
+<script type="text/javascript" src="app/filters.js"></script>
+<script type="text/javascript" src="app/animations.js"></script>
+<!-- /build -->
+
+<link rel="stylesheet" type="text/css" ng-href="{{baseUrl}}/resources/css/theme.css">
+</body>
+</html>

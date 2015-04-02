@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <title>Wichita Mountain Locations</title>
+
+<!-- build:css resources/css/style.css -->
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css">
+    <link rel="stylesheet" type="text/css" href="resources/css/animations.css">
+<!-- /build -->
+
+<!-- build:css resources/external/css/lib.grp.css -->
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/ng-scrollbar.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/select.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/ngActivityIndicator.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/angular-carousel.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/angular/extras/angular-motion.min.css" />
+
+    <link rel="stylesheet" type="text/css" href="resources/external/jquery/jquery-ui.min.css">
+
+    <link rel="stylesheet" type="text/css" href="resources/external/kendo/kendo.common.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/kendo/kendo.default.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/jquery/plugins/jquery.magnific-popup.css">
+<!-- /build -->
+
+    <link rel="stylesheet" type="text/css" href="resources/external/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/bootstrap/css/bootstrap.icon-large.min.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/leaflet/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/nps/maki-sprite.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/leaflet/plugins/L.Control.Sidebar.css" />
+    <link rel="stylesheet" type="text/css" href="resources/external/leaflet/plugins/leaflet.awesome-markers.css">
+    <link rel="stylesheet" type="text/css" href="resources/external/font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700" />
+</head>
+<body id="ctl00_mainBody" class="recApp pageWrapper fadeIn">
+
+<div id="wrapper">
+    <!-- Begin Header Navigation -->
+    <nav id="AppNav" class="navbar navbar-default" role="navigation">
+    <a class="sr-only sr-only-focusable" href="#content">Skip to main content</a>
+
+    <div id="header" class="clearfix">
+        <h1 id="organisation">
+            <a href="http://www.fws.gov/">
+                <img src="851899/resources/images/logo.png" height="95px" width="264px" alt="U.S. Fish &amp; Wildlife Service">
+            </a>
+        </h1>
+        <h2 id="refuge" title="Wichita Mountains">
+            <a href="http://www.fws.gov/refuge/Wichita_Mountains/" title="Wichita Mountains">Wichita Mountains</a><span id="refuge_state">Wildlife Refuge | Oklahoma</span></h2>
+            <a class="customBrand navbar-brand" href="/">
+                <img src="851899/resources/images/logo_secondary.png" alt="" class="brandImage" title="logo" />
+            </a>
+            <div id="search-bar"></div>
+    </div>
+
+    </nav>
+    <!-- End Header Navigation -->
+    <div id="content" class="clearfix">
+        <div id="maincol" class="col">
+            <div class="panel-body">
+                <div class="locationLinks" ng-controller="MainCtrl as main">
+                    <ul class="summary-list">
+                        <li>
+                            <a class="link" href="location.html?locationId=851899">Doris Campground</a>
+                            <img class="thumbImage" src="./851899/resources/images/thumb/scenic_04.jpg" alt="Doris">
+                            <p>Doris Campground is a modern camping facility designed to enhance your visit to the Wichita Mountains Wildlife Refuge. The campground offers a wide range of camping opportunities.</p>
+                        </li>
+                        <li>
+                            <a class="link" href="location.html?locationId=861299">Fawn Creek Campground</a>
+                            <img class="thumbImage" src="./861299/resources/images/thumb/scenic_03.jpg" alt="Fawn Creek">
+                            <p>Fawn Creek Campground, located south of Refuge Headquarters near the Charons Garden Wilderness Area, has four camping sites available for organized youth groups.</p>
+                        </li>
+                        <li>
+                            <a class="link" href="https://beta.kinsail.us/calendar.asp?p=wichi&pt=fws&GroupID=37099&ItemID=861899">Backcountry Camping</a>
+                            <img class="thumbImage" src="./861299/resources/images/thumb/scenic_04.jpg" alt="Doris">
+                            <p>Backcountry Camping</p>
+                        </li>
+                        <li>
+                            <a class="link" href="https://beta.kinsail.us/calendar.asp?p=wichi&pt=fws&GroupID=37099&ItemID=861999&Item861999Quantity=1">Boulder Cabin</a>
+                            <img class="thumbImage" src="./861299/resources/images/thumb/scenic_05.jpg" alt="Boulder">
+                            <p>Boulder</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- build:js resources/external/js/lib.jquery.grp.js -->
+<script type="text/javascript" src="resources/external/jquery/jquery.min.js"></script>
+<script type="text/javascript" src="resources/external/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="resources/external/jquery/plugins/jquery.magnific-popup.min.js"></script>
+<script type="text/javascript" src="resources/external/jquery/plugins/jquery.slimscroll.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.core.grp.js -->
+<script type="text/javascript" src="resources/external/angular/angular.min.js"></script>
+<script type="text/javascript" src="resources/external/lodash/lodash.min.js"></script>
+<script type="text/javascript" src="resources/external/kendo/kendo.all.min.js"></script> 
+<script type="text/javascript" src="resources/external/moment/moment.min.js"></script>
+<script type="text/javascript" src="resources/external/moment/moment-range.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.angular.grp.js -->
+<script type="text/javascript" src="resources/external/angular/angular-route.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-resource.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-sanitize.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-animate.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/angular-touch.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.angular.extras.grp.js -->
+<script type="text/javascript" src="resources/external/angular/extras/angular-leaflet-directive.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/date.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/select.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/ui-bootstrap-tpls-0.11.2.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/angularjs-dropdown-multiselect.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/ngActivityIndicator.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/angular-carousel.min.js"></script>
+<script type="text/javascript" src="resources/external/angular/extras/restangular.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/external/js/lib.leaflet.grp.js -->
+<script type="text/javascript" src="resources/external/leaflet/leaflet.js"></script>
+<script type="text/javascript" src="resources/external/leaflet/plugins/L.Control.Sidebar.js"></script>
+<script type="text/javascript" src="resources/external/leaflet/plugins/leaflet.awesome-markers.min.js"></script>
+<!-- /build -->
+
+<!-- build:js resources/js/ts.grp.js -->
+<script type="text/javascript" src="resources/js/compiled/RecreationCore.js"></script>
+<script type="text/javascript" src="resources/js/compiled/KinsailRecServer.js"></script>
+<!-- /build -->
+
+<link rel="stylesheet" type="text/css" href="851899/resources/css/theme.css">
+</body>
+</html>

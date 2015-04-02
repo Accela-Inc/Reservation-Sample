@@ -1,0 +1,36 @@
+
+<div ng-show="menuItinerary" id="MyItinerary" class="animate-show arrow_box arrow_top" ngController="ItineraryCtrl">
+    <div class="panel-body">
+        <div id="Itinerary">
+            <div ng-switch on="isCheckoutDisabled">
+                <div ng-switch-when="false">
+                    <div ng-repeat="item in itinerary" class="panel panel-default">
+                        <div class="panel-heading">
+                            <h6>{{item.start}} - {{item.end}}
+                                <a href="#/item/{{item.siteObjectId}}" class="globalFloatRight globalAction" title="Delete"><i class="fa fa-trash"></i></a>
+                                <a href="#/item/{{item.siteObjectId}}" class="globalFloatRight globalAction" title="Edit"><i class="fa fa-edit"></i></a>
+                            </h6>
+                        </div>
+                        <div class="panel-body">
+                            <ul>
+                                <li ng-repeat="activity in item.activities">{{activity.title}}: {{activity.descriptionHtml}}</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body" ng-switch-default>There are currently no items in your itinerary.</div>
+            </div>
+        </div>
+        <a href="#/itinerary" ng-disabled="{{isCheckoutDisabled}}" class="btn btn-default">Edit Itinerary</a>
+        <button ng-click="checkout($event)" ng-disabled="{{isCheckoutDisabled}}" type="button" class="btn btn-primary">Complete Reservation</button>
+<!--         
+    <a href="#" class="viewall-btn">View All</a>
+-->
+    </div>
+    <div ng-show="AILoading" class="overlay pageOverlay">
+        <div class="loadingContainer">
+            <div class="name">Loading...</div>
+            <div ng-activity-indicator="SpinnerWhite"></div>
+        </div>
+    </div>
+</div>
